@@ -1,0 +1,154 @@
+:root{
+    --color-primary:#219C90;
+    --color-grey:#EAECED;
+}
+
+
+html{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+body{
+    margin: 0;
+    overflow-y: scroll;
+}
+
+.background{
+    background: url(../../images/background.jpg) no-repeat center center/cover;
+    object-fit: cover;
+    height: 351px;
+    overflow: hidden;
+}
+.blur{
+    background: rgba(0, 0, 0, 0.5);
+    height: 351px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header{
+  
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+  
+}
+.left-header{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+.right-header{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+.left-header .website-name{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 2.5rem
+}
+.nav-item{
+    margin-left: 20px;
+    font-size: .9rem;
+    cursor: pointer;
+}
+.nav-item:hover{
+    text-decoration: 1px underline;
+}
+.nav-item i:hover{
+    color: #219C90;
+}
+#drawer{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.drawer-container{
+    position: fixed;
+    right: -100%;
+    top: 0;
+    z-index: 10000;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0 0 4px grey;
+    transition: .2s ease-in;
+}
+
+
+#drawer-close-btn{
+    font-size: .9rem;
+    color: black;
+    right: 0;
+    position: absolute;
+    padding-right: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+ul{
+    margin-top: 25px;
+    padding-left: 0;
+}
+
+.drawer-item{
+    font-size: .8rem;
+    line-height: 1;
+    font-weight: 500;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    border-bottom: .3px solid grey;
+}
+
+.c-d-icon{
+    font-size: .7rem;
+}
+
+/* Top nav bar responsive */
+@media screen and (min-width:0px) and (max-width:900px) {
+    #rp,#id-en{
+        display: none;
+    }
+    #n1,#n2,#n3{
+        display: none;
+    }
+}
+
+/* @media screen and (min-width:0px) and (max-width:1200px){
+    #new-homes{
+        display: none;
+    }
+} */
+
+@media screen and (max-width:420px) {
+    .left-header .website-name{
+        
+        font-size: 1.5rem
+    }
+    .nav-item{
+        font-size: .8rem;
+    }
+    .right-header{
+        margin-right: 20px;
+    }
+
+    .background{
+        height: 340px;
+    }
+    
+    
+}
